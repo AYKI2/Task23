@@ -20,20 +20,30 @@ public class Main{
         }
 
         System.out.println("------------Before------------");
-        System.out.println(linkedList);
-        System.out.println(arrayList);
-        System.out.println(Arrays.toString(array));
+        System.out.println(sort(linkedList));
+        System.out.println(sort(arrayList));
+        System.out.println(Arrays.toString(sort(array)));
         System.out.println("------------------------------");
 
-        Collections.sort(linkedList);
-        Collections.sort(arrayList);
-        Arrays.sort(array);
-        System.out.println();
 
         System.out.println("------------After-------------");
-        System.out.println(linkedList);
-        System.out.println(arrayList);
-        System.out.println(Arrays.toString(array));
+        System.out.println(sort(linkedList));
+        System.out.println(sort(arrayList));
+        System.out.println(Arrays.toString(sort(array)));
         System.out.println("------------------------------");
+
+    }
+
+    public static LinkedList<Integer> sort (LinkedList<Integer> linkedList){
+        Collections.sort(linkedList);
+        return linkedList;
+    }
+    public static ArrayList<Integer> sort (ArrayList<Integer> arrayList){
+        Collections.sort(arrayList);
+        return arrayList;
+    }
+    public static int[] sort (int[] array){
+        Arrays.sort(array);
+        return array;
     }
 }
